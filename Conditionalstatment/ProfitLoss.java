@@ -10,13 +10,13 @@ public class ProfitLoss {
         System.out.println("Enter SP : ");
         int SP = sc.nextInt();
         if(CP < SP){
-            System.out.println("Profit");
+            System.out.println("Profit is : " + (SP - CP));
         }
-        else if( CP == SP ){
-            System.out.println("Neither Profit Nor Loss");
+        else if( CP > SP ){
+            System.out.println("Loss is : " + (CP - SP));
         }
         else{
-            System.out.println("Loss");
+            System.out.println("Neither Profit Nor Loss");
         }
     }
 }
