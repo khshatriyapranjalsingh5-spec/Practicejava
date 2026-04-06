@@ -1,7 +1,5 @@
 package OOPS;
 
-import java.util.Scanner;
-
 public class Passingclassestomethod {
     public static class Car {
     
@@ -12,17 +10,16 @@ public class Passingclassestomethod {
         int torque;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Car c = new Car();
+        c.name = "Suv";
+        c.length = 2.7;
+        c.seat = 5;
 
-        System.out.println("Enter name:");
-        c.name = sc.nextLine();
+        change(c);
 
-        System.out.println("Enter length:");
-        c.length = sc.nextDouble();
-
-        System.out.println("Enter seats:");
-        c.seat = sc.nextInt();
-        System.out.println(c.name+" "+c.length+" "+c.seat);
+        System.out.println(c.seat);
+    }
+    private static void change(Car c){
+        c.seat = 4;
     }
 }
