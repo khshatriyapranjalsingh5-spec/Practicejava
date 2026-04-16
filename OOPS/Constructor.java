@@ -5,14 +5,20 @@ public class Constructor {
         int seats;
         String name;
         double length;
+        car(){
+
+        }
         car(int x ,String s ,double d){
            seats = x;
            name = s;
            length = d;
         }
+        void print(){
+            System.out.println(seats+" "+name+" "+length);
+        }
     }
     public static void main(String[] args) {
         car c1 = new car(5, "Rohit", 3.99);
-        System.out.println(c1.name);
+        c1.print();
     }
 }
